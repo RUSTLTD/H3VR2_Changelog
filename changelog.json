@@ -1,0 +1,20 @@
+﻿{
+  "$schema": "./changelog.schema.json",
+  "data": [
+    {
+      "version": "v0.0.0",
+      "date": "January 1, 1970",
+      "title": "The Example Update",
+      "platforms": ["Meta"],
+      "sections": {
+        "Added": [
+          "Created this example changelog.",
+          "Had a party."
+        ],
+        "Fixed": [
+          "Fixed all the things."
+        ]
+      }
+    }
+  ]
+}
