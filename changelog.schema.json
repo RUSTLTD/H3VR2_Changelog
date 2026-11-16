@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "H3VR2 Changelog",
+  "type": "object",
+  "required": ["data"],
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["version", "date", "title", "platforms", "sections"],
+        "properties": {
+          "version": {
+            "type": "string",
+            "description": "The patch version tag (e.g. v0.2.0)"
+          },
+          "date": {
+            "type": "string",
+            "description": "Release date string (e.g. November 16, 2026)"
+          },
+          "title": {
+            "type": "string",
+            "description": "The subtitle or marketing name of the update"
+          },
+          "platforms": {
+            "type": "array",
+            "description": "Target platforms for this update",
+            "items": {
+              "type": "string",
+              "enum": ["Meta", "SteamVR", "All Platforms"]
+            },
+            "minItems": 1
+          },
+          "sections": {
+            "type": "object",
+            "description": "Categories of changes like Added, Fixed, Changed",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
